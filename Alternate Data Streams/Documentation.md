@@ -28,4 +28,3 @@ This code poses severe security threats:
 
 ## Notes
 This code is not inherently malicious but demonstrates how ADS can be leveraged to create a stealthy attack. If modified to execute dangerous payloads (e.g., rootkits or keyloggers), it could allow attackers to maintain undetected control over a system and compromise sensitive information.
-<!-- Review follow-up details for documentation documentation -->

