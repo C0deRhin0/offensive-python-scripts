@@ -4,6 +4,25 @@ This repository contains a collection of **well-known** attacks/techniques imple
 
 ---
 
+## A defensive reading map
+
+The collection is organized as separate technique folders. Start with each folder’s documentation, trace the relevant trust boundary, and record how a defender would detect or constrain it.
+
+```mermaid
+flowchart LR
+D["Technique documentation"]:::source --> B["Identify affected<br/>trust boundary"]:::process
+    B --> R["Review risk<br/>and observable behavior"]:::review
+    R --> C["Document detection<br/>and mitigation"]:::process
+    C --> E["Defensive learning notes"]:::result
+    classDef source fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    classDef process fill:#ede9fe,stroke:#7c3aed,color:#3b0764
+    classDef store fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef review fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef result fill:#f1f5f9,stroke:#475569,color:#0f172a
+```
+
+There is no single application or safe aggregate launcher. Some samples modify files, persistence settings, or security controls; describing them as inherently harmless would be inaccurate. Use source review for a portfolio demonstration and keep any execution inside an explicitly authorized disposable lab.
+
 ## 📂 Documentation  
 Each script is accompanied by a detailed documentation file located in its respective folder. The documentation includes the following sections:
 
@@ -19,7 +38,7 @@ Each script is accompanied by a detailed documentation file located in its respe
 
 **TEST IN CONTROLLED ENVIRONMENTS ONLY.**
 
-**SCRIPTS IN THIS REPO ARE INTENTIONALLY CRAFTED TO BE WEAK AND INHERENTLY NON-MALICIOUS.**
+**Some samples can change host state or expose sensitive information. Educational intent does not make execution harmless.**
 
 These scripts are provided to educate users, security researchers, and developers about potential security vulnerabilities so that they can better understand and mitigate such threats. Any misuse of these scripts is strictly prohibited. The author is not responsible for any damages caused by the misuse of the code.
 
